@@ -23,11 +23,11 @@ const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <div className="flex items-center w-auto space-x-6 hover:bg-gray-700 text-gray-800 px-3 py-2 text-sm font-medium">
+                <div className="flex items-center w-auto space-x-6 text-gray-800 px-3 py-2 text-sm font-medium">
                   <div>
                     <Link
                       class={
-                        pathname === "/"
+                        pathname === "/dashboard"
                           ? "text-sm text-blue-600 font-bold"
                           : "text-sm text-gray-400 hover:text-gray-500"
                       }
