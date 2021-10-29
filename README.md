@@ -19,6 +19,7 @@ Hosted on Netlify
 ### `Author`
 
 Twitter: [@leokanye](https://twitter.com/leokanye)
+
 LinkedIn: [@leonard-rwai-kanyesigye](https://www.linkedin.com/in/leonard-rwai-kanyesigye/)
 
 ### Logs
