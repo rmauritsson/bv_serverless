@@ -26,7 +26,7 @@ const Navbar = () => {
                 <div className="flex items-center w-auto space-x-6 text-gray-800 px-3 py-2 text-sm font-medium">
                   <div>
                     <Link
-                      class={
+                      className={
                         pathname === "/dashboard"
                           ? "text-sm text-blue-600 font-bold"
                           : "text-sm text-gray-400 hover:text-gray-500"
@@ -36,25 +36,25 @@ const Navbar = () => {
                       Profile
                     </Link>
                   </div>
-                  <div class="text-gray-300">
+                  <div className="text-gray-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       stroke="currentColor"
-                      class="w-4 h-4 current-fill"
+                      className="w-4 h-4 current-fill"
                       viewBox="0 0 24 24"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
                       />
                     </svg>
                   </div>
                   <div>
                     <Link
-                      class={
+                      className={
                         pathname === "/volunteer-assignment"
                           ? "text-sm text-blue-600 font-bold"
                           : "text-sm text-gray-400 hover:text-gray-500"
@@ -64,26 +64,26 @@ const Navbar = () => {
                       Assignment
                     </Link>
                   </div>
-                  <div class="text-gray-300">
+                  <div className="text-gray-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       stroke="currentColor"
-                      class="w-4 h-4 current-fill"
+                      className="w-4 h-4 current-fill"
                       viewBox="0 0 24 24"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
                       />
                     </svg>
                   </div>
                   <div>
                     <Link
-                      class={
-                        pathname === "/nda"
+                      className={
+                        pathname === "/"
                           ? "text-sm text-blue-600 font-bold"
                           : "text-sm text-gray-400 hover:text-gray-500"
                       }
@@ -96,14 +96,14 @@ const Navbar = () => {
             </div>
             <div>
               <Link
-                class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200"
-                to="#"
+                className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200"
+                to="/"
               >
                 Sign In
               </Link>
               <Link
-                class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
-                to="#"
+                className="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+                to="/"
               >
                 Sign up
               </Link>
@@ -127,9 +127,9 @@ const Navbar = () => {
                   >
                     <title>Menu</title>
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                 ) : (
@@ -167,8 +167,8 @@ const Navbar = () => {
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <Link
-                  class={
-                    pathname === "/"
+                  className={
+                    pathname === "/dashboard"
                       ? "text-sm text-blue-600 font-bold block px-3 py-2 rounded-md text-base font-medium"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   }
@@ -178,7 +178,7 @@ const Navbar = () => {
                 </Link>
 
                 <Link
-                  class={
+                  className={
                     pathname === "/volunteer-assignment"
                       ? "text-sm text-blue-600 font-bold block px-3 py-2 rounded-md text-base font-medium"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
@@ -189,31 +189,31 @@ const Navbar = () => {
                 </Link>
 
                 <Link
-                  class={
+                  className={
                     pathname === "/nda"
                       ? "text-sm text-blue-600 font-bold block px-3 py-2 rounded-md text-base font-medium"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   }
-                  to="/nda"
+                  to="/"
                 >
                   Non-Disclosure Agreement
                 </Link>
-                <div class="mt-auto">
-                  <div class="pt-6">
+                <div className="mt-auto">
+                  <div className="pt-6">
                     <Link
-                      class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
-                      to="#"
+                      className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
+                      to="/"
                     >
                       Sign in
                     </Link>
                     <Link
-                      class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
+                      className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
                       to="#"
                     >
                       Sign Up
                     </Link>
                   </div>
-                  <p class="my-4 text-xs text-center text-gray-400">
+                  <p className="my-4 text-xs text-center text-gray-400">
                     <span>Copyright © 2021</span>
                   </p>
                 </div>
