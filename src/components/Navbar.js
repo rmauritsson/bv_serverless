@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Transition } from "@headlessui/react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
   const pathname = window.location.pathname;
   const [isOpen, setIsOpen] = useState(false);
+  const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
 
   return (
     <div>
@@ -12,11 +14,8 @@ const Navbar = () => {
         <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative px-4 py-4 flex justify-between items-center bg-white">
             <div className="flex-shrink-0">
-              <Link className="h-8 w-8" to="/">
-                <img
-                  src="https://daks2k3a4ib2z.cloudfront.net/6165dcf3d52e26132ab86652/617ec5dfbfffe9e60218aeb7_bv-logo-website-p-130x130q80.png"
-                  alt="logo"
-                />
+              <Link className="h-8 w-8 font-semibold text-blue-500" to="/">
+                broken vessel
               </Link>
             </div>
             <div className="hidden md:block">
@@ -26,7 +25,7 @@ const Navbar = () => {
                     <Link
                       className={
                         pathname === "/dashboard"
-                          ? "text-sm text-blue-600 font-semibold"
+                          ? "text-sm text-blue-600"
                           : "text-sm text-gray-400 hover:text-gray-500"
                       }
                       to="/dashboard"
@@ -50,12 +49,12 @@ const Navbar = () => {
                       />
                     </svg>
                   </div>
-
+                  {/*
                   <div>
                     <Link
                       className={
                         pathname === "/professionals"
-                          ? "text-sm text-blue-600 font-semibold"
+                          ? "text-sm text-blue-600"
                           : "text-sm text-gray-400 hover:text-gray-500"
                       }
                       to="/professionals"
@@ -79,12 +78,13 @@ const Navbar = () => {
                       />
                     </svg>
                   </div>
+                  */}
 
                   <div>
                     <Link
                       className={
                         pathname === "/volunteers"
-                          ? "text-sm text-blue-600 font-semibold"
+                          ? "text-sm text-blue-600"
                           : "text-sm text-gray-400 hover:text-gray-500"
                       }
                       to="/volunteers"
@@ -108,12 +108,12 @@ const Navbar = () => {
                       />
                     </svg>
                   </div>
-
+                  {/** Update this with the airtable form */}
                   <div>
                     <Link
                       className={
                         pathname === "/volunteer-assignment"
-                          ? "text-sm text-blue-600 font-semibold"
+                          ? "text-sm text-blue-600 "
                           : "text-sm text-gray-400 hover:text-gray-500"
                       }
                       to="/volunteer-assignment"
@@ -141,6 +141,14 @@ const Navbar = () => {
               </div>
             </div>
             <div>
+              {isAuthenticated && (
+                <button
+                  className="relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl"
+                  onClick={logout}
+                >
+                  Log Out
+                </button>
+              )}
               <Link
                 className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200"
                 to="/"

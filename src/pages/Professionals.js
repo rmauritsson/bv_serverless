@@ -1,10 +1,12 @@
 import Intro from "../components/Intro";
 import Navbar from "../components/Navbar";
+import WhatsAppWidget from "react-whatsapp-widget";
 
 const Professionals = () => {
   return (
     <div>
       <Navbar />
+      <WhatsAppWidget phoneNumber="+12345293191" companyName="Broken Vessel" />
       <Intro />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <section className="grid md:grid-cols-2 mt-8 lg:grid-cols-1 gap-x-8 gap-y-8">

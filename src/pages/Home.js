@@ -1,55 +1,88 @@
-import Navbar from "../components/Navbar";
+import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Home = () => {
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
+
   return (
-    <section>
-      <Navbar />
-      <div class="md:h-screen bg-blue-800 text-white py-20">
-        <div class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
-          <div class="flex flex-col w-full lg:w-1/3 justify-center items-start p-8">
-            <h1 class="text-3xl md:text-5xl py-2 text-yellow-300 tracking-loose">
-              Broken Vessel
-            </h1>
-            <h2 class="text-2xl md:text-3xl leading-relaxed md:leading-snug mb-2">
-              Enabling more candor and unshamed conversations about mental
-              health
-            </h2>
-            <p class="text-sm md:text-base text-gray-50 mb-4">
-              Explore your favourite events and register now to showcase your
-              talent and win exciting prizes.
-            </p>
+    <body class="overflow-x-hidden antialiased">
+      <header class="relative z-50 w-full h-24">
+        <div class="container flex items-center justify-center h-full max-w-6xl px-8 mx-auto sm:justify-between xl:px-0">
+          <a
+            href="/"
+            class="relative flex items-center inline-block h-5 h-full font-black leading-none"
+          >
+            <span class="ml-3 text-xl text-gray-800">broken vessel</span>
+          </a>
+
+          <nav
+            id="nav"
+            class="absolute top-0 left-0 z-50 flex flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative"
+          >
+            <div class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden">
+              <a
+                href="#_"
+                class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold"
+              >
+                Go back Home
+              </a>
+            </div>
+          </nav>
+
+          <div class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between">
             <a
-              href="#"
-              class="bg-transparent hover:bg-yellow-300 text-yellow-300 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent"
+              href="#_"
+              class="relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl"
             >
-              Explore Now
+              Go back Home
             </a>
           </div>
-          <div class="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3  justify-center">
-            <div class="h-48 flex flex-wrap content-center">
-              <div>
-                <img
-                  class="inline-block mt-28 hidden xl:block"
-                  src="https://user-images.githubusercontent.com/54521023/116969935-c13d5b00-acd4-11eb-82b1-5ad2ff10fb76.png"
-                />
-              </div>
-              <div>
-                <img
-                  class="inline-block mt-24 md:mt-0 p-8 md:p-0"
-                  src="https://user-images.githubusercontent.com/54521023/116969931-bedb0100-acd4-11eb-99a9-ff5e0ee9f31f.png"
-                />
-              </div>
-              <div>
-                <img
-                  class="inline-block mt-28 hidden lg:block"
-                  src="https://user-images.githubusercontent.com/54521023/116969939-c1d5f180-acd4-11eb-8ad4-9ab9143bdb50.png"
-                />
-              </div>
+        </div>
+      </header>
+
+      <div class="relative items-center justify-center w-full overflow-x-hidden lg:pt-40 lg:pb-40 xl:pt-40 xl:pb-64">
+        <div class="container flex flex-col items-center justify-between h-full max-w-6xl px-8 mx-auto -mt-32 lg:flex-row xl:px-0">
+          <div class="z-30 flex flex-col items-center w-full max-w-xl pt-48 text-center lg:items-start lg:w-1/2 lg:pt-20 xl:pt-40 lg:text-left">
+            <h1 class="relative mb-4 text-3xl font-black leading-tight text-gray-900 sm:text-6xl xl:mb-8">
+              Need someone to talk to?
+            </h1>
+            <p class="pr-0 mb-8 text-base text-gray-600 sm:text-lg xl:text-xl lg:pr-20">
+              Are you ready to start your adventure and start building the next
+              greatest SAAS app on the market?
+            </p>
+            <button
+              onClick={() => loginWithRedirect()}
+              className="relative self-start inline-block w-auto px-8 py-4 mx-auto mt-0 text-base font-bold text-white bg-indigo-600 border-t border-gray-200 rounded-md shadow-xl sm:mt-1 fold-bold lg:mx-0"
+            >
+              Get Started
+            </button>
+
+            {isAuthenticated && (
+              <button
+                onClick={() => loginWithRedirect()}
+                className="relative self-start inline-block w-auto px-8 py-4 mx-auto mt-0 text-base font-bold text-white bg-indigo-600 border-t border-gray-200 rounded-md shadow-xl sm:mt-1 fold-bold lg:mx-0"
+              >
+                LOg Out
+              </button>
+            )}
+          </div>
+          <div class="relative z-50 flex flex-col items-end justify-center w-full h-full lg:w-1/2 ms:pl-10">
+            <div class="container relative left-0 w-full max-w-4xl lg:absolute xl:max-w-6xl lg:w-screen">
+              <img
+                src="https://cdn.devdojo.com/images/september2020/macbook-mockup.png"
+                class="w-full h-auto mt-20 mb-20 ml-0 lg:mt-24 xl:mt-40 lg:mb-0 lg:h-full lg:-ml-12"
+              />
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <footer class="px-4 pb-8 text-white bg-white border-t border-gray-200">
+        <div class="pt-4 pt-6 mt-10 text-center text-gray-500 border-t border-gray-100">
+          © 2021 Broken Vessel Uganda. All rights reserved.
+        </div>
+      </footer>
+    </body>
   );
 };
 

@@ -18,13 +18,13 @@ const Dashboard = () => {
               <img
                 className="h-56 shadow rounded-t w-full object-cover object-center"
                 src="https://tuk-cdn.s3.amazonaws.com/assets/components/grid_cards/gc_29.png"
-                alt
+                alt="dashboard"
               />
               <div className="inset-0 m-auto w-24 h-24 absolute bottom-0 -mb-12 xl:ml-10 rounded border-2 shadow border-white">
                 <img
                   className="w-full h-full overflow-hidden object-cover rounded"
                   src="https://image.freepik.com/free-photo/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes_176532-10257.jpg"
-                  alt
+                  alt="dashboard"
                 />
               </div>
             </div>
@@ -235,21 +235,21 @@ const Dashboard = () => {
                     <img
                       className="h-full w-full object-cover rounded-full"
                       src="https://dh-ui.s3.amazonaws.com/assets/webapp/layout/grid_cards/grid_card21.jpg"
-                      alt
+                      alt="dashboard"
                     />
                   </div>
                   <div className="w-6 h-6 bg-cover rounded-full -ml-1 border border-white shadow">
                     <img
                       className="h-full w-full object-cover rounded-full"
                       src="https://dh-ui.s3.amazonaws.com/assets/webapp/layout/grid_cards/grid_card22.jpg"
-                      alt
+                      alt="dashboard"
                     />
                   </div>
                   <div className="w-6 h-6 bg-cover rounded-full bg-center -ml-1 border border-white shadow">
                     <img
                       className="h-full w-full object-cover rounded-full"
                       src="https://dh-ui.s3.amazonaws.com/assets/webapp/layout/grid_cards/grid_card23.jpg"
-                      alt
+                      alt="dashboard"
                     />
                   </div>
                   <p className="text-xs ml-1 text-gray-600 dark:text-gray-400">
@@ -278,7 +278,7 @@ const Dashboard = () => {
                     - Create a competitive analysis report, create personas and
                     also design UX research reports.
                   </li>
-                  <li className="text-xs text-gray-600 dark:text-gray-400">
+                  <li className="text-xs  text-gray-700 dark:text-gray-400">
                     - Sitemap and information architecture visualizing the
                     organized model of all the components and information
                     contained in product.
@@ -289,32 +289,28 @@ const Dashboard = () => {
                     <img
                       className="h-full w-full object-cover rounded-full"
                       src="https://dh-ui.s3.amazonaws.com/assets/webapp/layout/grid_cards/grid_card21.jpg"
-                      alt
+                      alt="dashboard"
                     />
                   </div>
                   <div className="w-6 h-6 bg-cover rounded-full -ml-1 border border-white shadow">
                     <img
                       className="h-full w-full object-cover rounded-full"
                       src="https://dh-ui.s3.amazonaws.com/assets/webapp/layout/grid_cards/grid_card22.jpg"
-                      alt
+                      alt="dashboard"
                     />
                   </div>
                   <div className="w-6 h-6 bg-cover rounded-full bg-center -ml-1 border border-white shadow">
                     <img
                       className="h-full w-full object-cover rounded-full"
                       src="https://dh-ui.s3.amazonaws.com/assets/webapp/layout/grid_cards/grid_card23.jpg"
-                      alt
+                      alt="dashboard"
                     />
                   </div>
-                  <p className="text-xs ml-1 text-gray-600 dark:text-gray-400">
-                    +3 attendees
-                  </p>
+                  <p className="text-xs ml-1 text-gray-600">+3 attendees</p>
                 </div>
               </div>
               <div className="w-3/12 flex flex-col items-end justify-between">
-                <p className="text-xs text-gray-600 dark:text-gray-400">
-                  9am - 10am
-                </p>
+                <p className="text-xs text-gray-600 ">9am - 10am</p>
                 <div className="bg-yellow-200 h-6 w-20 mb-4 md:mb-0 rounded-md flex items-center justify-center">
                   <span className="text-xs text-yellow-600 font-normal">
                     Personal
@@ -322,17 +318,17 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="p-5 flex justify-between rounded bg-gray-100 dark:bg-gray-700">
+            <div className="p-5 flex justify-between rounded bg-gray-100">
               <div className="w-3/5">
-                <p className="mb-4 text-sm font-bold text-gray-800 dark:text-gray-100">
+                <p className="mb-4 text-sm font-bold text-gray-800">
                   UX Team Skype Session
                 </p>
                 <ul className="mb-5">
-                  <li className="mb-2 text-xs text-gray-600 dark:text-gray-400">
+                  <li className="mb-2 text-xs text-gray-600">
                     - Create a competitive analysis report, create personas and
                     also design UX research reports.
                   </li>
-                  <li className="text-xs text-gray-600 dark:text-gray-400">
+                  <li className="text-xs text-gray-600 ">
                     - Sitemap and information architecture visualizing the
                     organized model of all the components and information
                     contained in product.
